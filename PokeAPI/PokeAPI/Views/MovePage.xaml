@@ -7,9 +7,29 @@
              x:Class="PokeAPI.Views.MovePage">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <StackLayout BackgroundColor="{StaticResource PokemonNavy}">
+                <Label Text="{Binding Title}" 
+                       TextColor="White"
+                       FontSize="Title"
+                       FontAttributes="Bold"
+                       HorizontalOptions="StartAndExpand"
+                       VerticalOptions="Center"
+                       Margin="10"/>
+            </StackLayout>
+            <CollectionView ItemsSource="{Binding Moves}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout Spacing="8"
+                                     Padding="8">
+                            <Label Text="{Binding name}"/>
+                            <Label Text="Test"/>
+                            <Label Text="{Binding pp}" />
+                            <Label Text="{Binding accuracy}"/>
+
+                        </StackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
