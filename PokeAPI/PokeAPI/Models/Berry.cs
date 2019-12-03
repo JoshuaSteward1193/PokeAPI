@@ -5,7 +5,7 @@ using System.Text;
 namespace PokeAPI.Models
 {
 
-    public class Rootobject
+    public class Berry
     {
         public Firmness firmness { get; set; }
         public Flavor[] flavors { get; set; }

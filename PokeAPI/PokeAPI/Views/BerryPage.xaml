@@ -6,10 +6,15 @@
              mc:Ignorable="d"
              x:Class="PokeAPI.Views.BerryPage">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        <CollectionView ItemsSource="{Binding Berries}" >
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout Spacing="8"
+                                 Padding="8">
+                        <Label Text="{Binding name}" />
+                    </StackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
     </ContentPage.Content>
 </ContentPage>
