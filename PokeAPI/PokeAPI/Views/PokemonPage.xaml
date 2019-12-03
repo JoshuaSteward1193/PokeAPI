@@ -36,7 +36,7 @@
                         </Label>
                         <Image Source="{Binding sprites.front_default}"/>
                         <BoxView HeightRequest="2"
-                                 Color="Black"/>
+                                 Color="{StaticResource PokemonNavy}"/>
                     </StackLayout>
                 </DataTemplate>
             </CollectionView.ItemTemplate>

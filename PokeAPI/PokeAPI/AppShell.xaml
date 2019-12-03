@@ -34,10 +34,14 @@
     <TabBar>
         <Tab Title="Pokémon" Icon="pikachu2.png">
             <ShellContent ContentTemplate="{DataTemplate local:PokemonPage}" />
-        </Tab>        
-        <Tab Title="About" Icon="tab_about.png">
-            <ShellContent ContentTemplate="{DataTemplate local:AboutPage}" />
         </Tab>
+        <Tab Title="Berries" Icon="berry1.png">
+            <ShellContent ContentTemplate="{DataTemplate local:BerryPage}" />
+        </Tab>
+        <Tab Title="Moves" Icon="pow1.png">
+            <ShellContent ContentTemplate="{DataTemplate local:MovePage}" />
+        </Tab>
+        
     </TabBar>
 
     <!-- Optional Templates 
