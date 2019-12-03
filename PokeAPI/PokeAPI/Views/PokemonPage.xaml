@@ -14,8 +14,16 @@
                 <DataTemplate>
                     <StackLayout Spacing="8"
                                  Padding="8">
-                        <Label Text="{Binding name}"/>
-                        <Label Text="{Binding id}"/>
+                        <Label>
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span Text="ID: " FontAttributes="Bold" />
+                                    <Span Text="{Binding id}" />
+                                    <Span Text=" - " />
+                                    <Span Text="{Binding name}" />
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>                        
                         <Label>
                             <Label.FormattedText>
                                 <FormattedString>
@@ -27,6 +35,8 @@
                             </Label.FormattedText>
                         </Label>
                         <Image Source="{Binding sprites.front_default}"/>
+                        <BoxView HeightRequest="2"
+                                 Color="Black"/>
                     </StackLayout>
                 </DataTemplate>
             </CollectionView.ItemTemplate>

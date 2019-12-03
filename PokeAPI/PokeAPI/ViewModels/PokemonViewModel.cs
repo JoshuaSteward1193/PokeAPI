@@ -32,8 +32,10 @@ namespace PokeAPI.ViewModels
                 Pokemon.Clear();
                 var pokemon = await DataStore.GetItemsAsync(true);
                 foreach(var poke in pokemon)
-                {                    
-                    Pokemon.Add(poke);
+                {
+                    Pokemon temp = poke;
+                    temp.name = UppercaseFirst(temp.name);
+                    Pokemon.Add(temp);
                 }
             } 
             catch (Exception ex)
@@ -44,6 +46,16 @@ namespace PokeAPI.ViewModels
             {
                 IsBusy = false;
             }
+        }
+        static string UppercaseFirst(string s)
+        {
+            // Check for empty string.
+            if (string.IsNullOrEmpty(s))
+            {
+                return string.Empty;
+            }
+            // Return char and concat substring.
+            return char.ToUpper(s[0]) + s.Substring(1);
         }
     }
 }
