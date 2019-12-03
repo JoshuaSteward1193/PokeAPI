@@ -21,7 +21,7 @@
                                 <FormattedString>
                                     <Span Text="{Binding name}"/>
                                     <Span Text=" is of the "/>
-                                    <Span Text="{Binding types[0]}"/>
+                                    <Span Text="{Binding types[0].type.name}"/>
                                     <Span Text=" type."/>
                                 </FormattedString>
                             </Label.FormattedText>
