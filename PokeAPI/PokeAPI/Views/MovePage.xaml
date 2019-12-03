@@ -21,10 +21,26 @@
                     <DataTemplate>
                         <StackLayout Spacing="8"
                                      Padding="8">
-                            <Label Text="{Binding name}"/>
-                            <Label Text="Test"/>
-                            <Label Text="{Binding pp}" />
-                            <Label Text="{Binding accuracy}"/>
+                            <Label Text="{Binding name}"
+                                   FontAttributes="Bold"/>
+                            <Label>
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="Power Points: "/>
+                                        <Span Text="{Binding pp}"/>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                            <Label>
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="Accuracy: "/>
+                                        <Span Text="{Binding accuracy}"/>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                            <BoxView HeightRequest="2"
+                                     Color="{StaticResource PokemonNavy}"/>
 
                         </StackLayout>
                     </DataTemplate>

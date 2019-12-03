@@ -48,7 +48,12 @@ namespace PokeAPI.Services
             {
                 Move temp = new Move();
                 var json = await client.GetStringAsync($"move/{r.name}");
-                temp = await Task.Run(() => JsonConvert.DeserializeObject<Move>(json));
+                try
+                {
+                    temp = await Task.Run(() => JsonConvert.DeserializeObject<Move>(json));
+                }
+                finally { }
+                
                 MoveList.Add(temp);
             }
             return MoveList;

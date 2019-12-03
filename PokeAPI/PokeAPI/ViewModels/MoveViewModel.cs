@@ -13,7 +13,7 @@ namespace PokeAPI.ViewModels
     {
         public ObservableCollection<Move> Moves { get; set; }
         public Command LoadItemsCommand { get; set; }
-        public MoveDataStore DataStore => new MoveDataStore();
+        public MoveDataStore DataStore = new MoveDataStore();
         public MoveViewModel()
         {
             Title = "Moves";
@@ -22,7 +22,7 @@ namespace PokeAPI.ViewModels
         }
 
         private async Task ExecuteLoadItemsCommand()
-        {
+            {
             if (IsBusy)
                 return;
             IsBusy = true;

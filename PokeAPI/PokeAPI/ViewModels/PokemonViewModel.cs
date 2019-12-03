@@ -14,10 +14,10 @@ namespace PokeAPI.ViewModels
     {
         public ObservableCollection<Pokemon> Pokemon { get; set; }
         public Command LoadItemsCommand { get; set; }
-        public PokemonDataStore DataStore => new PokemonDataStore();
+        public PokemonDataStore DataStore = new PokemonDataStore();
         public PokemonViewModel()
         {
-            Title = "Pokemon";
+            Title = "Pokémon";
             Pokemon = new ObservableCollection<Pokemon>();
             LoadItemsCommand = new Command(async () => await ExecuteLoadItemsCommand());
         }

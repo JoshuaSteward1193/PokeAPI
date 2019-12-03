@@ -14,7 +14,7 @@ namespace PokeAPI.ViewModels
     {
         public ObservableCollection<Berry> Berries { get; set; }
         public Command LoadItemsCommand { get; set; }
-        public BerryDataStore DataStore => new BerryDataStore();
+        public BerryDataStore DataStore = new BerryDataStore();
         public BerryViewModel()
         {
             Title = "Berries";
