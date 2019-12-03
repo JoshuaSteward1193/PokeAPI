@@ -12,6 +12,10 @@
                     <StackLayout Spacing="8"
                                  Padding="8">
                         <Label Text="{Binding name}" />
+                        <Label Text="{Binding size}" />
+                        <Label Text="{Binding smoothness}" />
+                        <BoxView HeightRequest="2"
+                                 Color="{StaticResource PokemonNavy}" />
                     </StackLayout>
                 </DataTemplate>
             </CollectionView.ItemTemplate>

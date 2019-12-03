@@ -15,8 +15,7 @@ namespace PokeAPI.Models
         public Held_Items[] held_items { get; set; }
         public int id { get; set; }
         public bool is_default { get; set; }
-        public string location_area_encounters { get; set; }
-        public Move[] moves { get; set; }
+        public string location_area_encounters { get; set; }        
         public string name { get; set; }
         public int order { get; set; }
         public Species species { get; set; }
@@ -97,19 +96,7 @@ namespace PokeAPI.Models
     {
         public string name { get; set; }
         public string url { get; set; }
-    }
-
-    public class Move
-    {
-        public Move1 move { get; set; }
-        public Version_Group_Details[] version_group_details { get; set; }
-    }
-
-    public class Move1
-    {
-        public string name { get; set; }
-        public string url { get; set; }
-    }
+    }    
 
     public class Version_Group_Details
     {
