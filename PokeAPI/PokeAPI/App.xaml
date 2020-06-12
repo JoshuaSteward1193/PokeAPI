@@ -9,7 +9,7 @@
         <ResourceDictionary>
             <Color x:Key="PokemonYellow">#ffcb05</Color>
             <Color x:Key="PokemonBlue">#3d7dca</Color>
-            <Color x:Key="PokemonNavy">#003a70</Color>
+            <Color x:Key="PokemonNavy">#003a71</Color>
         </ResourceDictionary>
     </Application.Resources>
 </Application>
